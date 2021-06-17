@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <title>Login Form</title>
+    <link rel="Stylesheet" type="text/css" href="login.css">
+    <body>
+
+      <div class="Home-affairs">
+        <h1>Dpartment of Home Affairs</h1>
+        
+      </div>
+         <!----Log in form----------------->
+
+        <div class="login-box">
+          <img src="noun_user login_178831 (1).png">
+          <h1>Log In</h1>
+         
+          
+          <div class="text-box">
+            <img src="icons8-user-50.png">
+            <input type="text" placeholder="Email" id="email_field" name="E-mail" value="">
+        
+          </div>
+          <div class="text-box">
+            <img src="icons8-key-24.png">
+            <input type="password" placeholder="Password" id="password_field" name="password" value="">
+        
+          </div>
+          <input class="btn onclick()" type="button" name="btn-submit " value="Login">
+        
+        </div>
+        
+        </div>
+<script type="text/javascript" src="login.js"></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAfXRPJ6xDOA01vkezR-0VsveCCIbbLOVc",
+    authDomain: "database-b443d.firebaseapp.com",
+    projectId: "database-b443d",
+    storageBucket: "database-b443d.appspot.com",
+    messagingSenderId: "456438698305",
+    appId: "1:456438698305:web:e0fe15cccbbe193d65d1c0",
+    measurementId: "G-FG9DNP0Z5J"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="index.js"></script>
+
+    </body>
+</html>
+
+<script>
+const form = document.getElementById('login-box');
+const idNumber = document.getElementById('ID_number');
+const password = document.getElementById('password');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const idNumber = idNumber.value.trim();
+  const passwordValue = password.value.trim();
+
+  if (idNumber.length===13) {
+    email.parentElement.className = 'login-box success';
+  } else {
+    email.parentElement.className = 'login-box fail';
+  }
+
+  if (passwordValue.length >= 6) {
+    password.parentElement.className = 'form-control success';
+  } else {
+    password.parentElement.className = 'form-control fail';
+  }
+});
+
+
+</script>
